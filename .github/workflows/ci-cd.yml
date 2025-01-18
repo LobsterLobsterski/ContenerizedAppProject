@@ -27,8 +27,7 @@ jobs:
         with:
           context: ./backend
           tags: |
-            your-dockerhub-username/tasks-backend:latest
-            # your-dockerhub-username/tasks-backend:1.0.0
+            lobsterlobsterski/tasks-backend:latest
           push: true
 
       - name: Build & push frontend
@@ -36,7 +35,7 @@ jobs:
         with:
           context: ./frontend
           tags: |
-            your-dockerhub-username/tasks-frontend:latest
+            lobsterlobsterski/tasks-frontend:latest
           push: true
 
       - name: Build & push nginx
@@ -44,5 +43,5 @@ jobs:
         with:
           context: ./nginx
           tags: |
-            your-dockerhub-username/tasks-nginx:latest
+            lobsterlobsterski/tasks-nginx:latest
           push: true
