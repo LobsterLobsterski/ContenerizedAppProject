@@ -23,25 +23,22 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build & push backend
-        uses: docker/build-push-action@v3
+        uses: docker/build-push-action@v4
         with:
           context: ./backend
-          tags: |
-            lobsterlobsterski/tasks-backend:latest
+          tags: lobsterlobsterski/tasks-backend:latest
           push: true
 
       - name: Build & push frontend
         uses: docker/build-push-action@v3
         with:
           context: ./frontend
-          tags: |
-            lobsterlobsterski/tasks-frontend:latest
+          tags: lobsterlobsterski/tasks-frontend:latest
           push: true
 
       - name: Build & push nginx
         uses: docker/build-push-action@v3
         with:
           context: ./nginx
-          tags: |
-            lobsterlobsterski/tasks-nginx:latest
+          tags: lobsterlobsterski/tasks-nginx:latest
           push: true
